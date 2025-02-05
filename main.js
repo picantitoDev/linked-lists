@@ -126,7 +126,24 @@ class LinkedList {
     return nodes.join(" -> ")
   }
 
-  insertAt(value, index) {}
+  insertAt(value, index) {
+    // main logic
+    if (index < 0 || index > this.size) {
+      return
+    }
+
+    if (this.size === 0 || index === this.size) {
+      this.append(value)
+    } else if (index === 0) {
+      this.prepend(value)
+    } else {
+      const newNode = new Node(value)
+      const prevNode = this.at(index - 1)
+      newNode.next = prevNode.next
+      prevNode.next = newNode
+      this.size++
+    }
+  }
   removeAt(value, index) {}
 }
 
@@ -138,7 +155,7 @@ list.prepend("parrot")
 list.prepend("hamster")
 list.prepend("snake")
 list.prepend("turtle")
-console.log(list.toString())
+console.log()
 //Binary Search
 
 /*
