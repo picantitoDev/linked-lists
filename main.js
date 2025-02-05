@@ -144,7 +144,22 @@ class LinkedList {
       this.size++
     }
   }
-  removeAt(value, index) {}
+  removeAt(index) {
+    if (index < 0 || index >= this.size || this.size === 0) {
+      return
+    }
+
+    if (index === this.size - 1) {
+      this.pop()
+    } else if (index === 0) {
+      this.head = this.head.next
+      this.size--
+    } else {
+      let prevNode = this.at(index - 1)
+      prevNode.next = prevNode.next.next
+      this.size--
+    }
+  }
 }
 
 const list = new LinkedList()
