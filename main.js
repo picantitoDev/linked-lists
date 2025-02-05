@@ -171,8 +171,8 @@ list.prepend("hamster")
 list.prepend("snake")
 list.prepend("turtle")
 console.log(LinkedList.toString())
-//Binary Search
 
+//Binary Search
 /*
 let arr = [4, 7, 12, 24, 32, 56, 63, 94]
 
