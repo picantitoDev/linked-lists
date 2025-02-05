@@ -170,7 +170,7 @@ list.prepend("parrot")
 list.prepend("hamster")
 list.prepend("snake")
 list.prepend("turtle")
-console.log()
+console.log(LinkedList.toString())
 //Binary Search
 
 /*
