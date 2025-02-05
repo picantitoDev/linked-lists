@@ -101,7 +101,19 @@ class LinkedList {
     }
     return false
   }
-  find(value) {}
+
+  find(value) {
+    let count = 0
+    let current = this.head // at (0)
+    while (current) {
+      if (current.data === value) {
+        return count
+      }
+      current = current.next
+      count++
+    }
+    return null
+  }
   toString() {}
   insertAt(value, index) {}
   removeAt(value, index) {}
