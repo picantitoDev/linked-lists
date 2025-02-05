@@ -40,9 +40,11 @@ class LinkedList {
   size() {
     return this.size
   }
+
   head() {
     return this.head
   }
+
   tail() {
     return this.tail
   }
@@ -85,7 +87,20 @@ class LinkedList {
     return
   }
 
-  contains(value) {}
+  contains(value) {
+    if (this.size === 0) {
+      return false
+    }
+
+    let current = this.head // at (0)
+    while (current) {
+      if (current.data === value) {
+        return true
+      }
+      current = current.next
+    }
+    return false
+  }
   find(value) {}
   toString() {}
   insertAt(value, index) {}
