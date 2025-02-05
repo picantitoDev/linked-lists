@@ -114,7 +114,18 @@ class LinkedList {
     }
     return null
   }
-  toString() {}
+
+  toString() {
+    let nodes = []
+    let current = this.head // at (0)
+    while (current) {
+      nodes.push(`(${current.data})`)
+      current = current.next
+    }
+    nodes.push("null")
+    return nodes.join(" -> ")
+  }
+
   insertAt(value, index) {}
   removeAt(value, index) {}
 }
@@ -127,7 +138,7 @@ list.prepend("parrot")
 list.prepend("hamster")
 list.prepend("snake")
 list.prepend("turtle")
-console.log(list.at(0))
+console.log(list.toString())
 //Binary Search
 
 /*
